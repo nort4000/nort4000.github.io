@@ -29,7 +29,7 @@ const businessSchema = {
     itemListElement: [
       "Bieżące wsparcie IT",
       "Konfiguracja stanowisk pracy",
-      "Sieci, kopie zapasowe i porządkowanie IT",
+      "Sieci i infrastruktura",
       "Pomoc komputerowa dla klientów indywidualnych",
     ].map((name) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name } })),
   },

@@ -113,12 +113,8 @@ button {
   width: max-content;
   align-items: center;
   gap: 1.75rem;
-  animation: marquee 28s linear infinite;
+  animation: marquee 22s linear infinite;
   will-change: transform;
-}
-
-.marquee-shell:hover .marquee-track {
-  animation-play-state: paused;
 }
 
 @keyframes marquee {
@@ -166,5 +162,10 @@ details[open] summary {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .marquee-track {
+    animation: marquee 36s linear infinite !important;
+    animation-iteration-count: infinite !important;
   }
 }

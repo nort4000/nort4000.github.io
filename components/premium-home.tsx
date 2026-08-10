@@ -30,34 +30,34 @@ const services = [
   {
     icon: Wrench,
     title: "Bieżące wsparcie IT",
-    short: "Awarie, system, poczta i codzienne problemy, które zatrzymują pracę.",
-    detail: "Diagnozuję przyczynę, przedstawiam możliwe rozwiązanie i realizuję uzgodniony zakres bez zbędnego komplikowania sprawy.",
+    short: "Problemy ze sprzętem, oprogramowaniem, kontami, pocztą i dostępem do firmowych zasobów.",
+    detail: "Pomagam pracownikom rozwiązywać problemy ze sprzętem, oprogramowaniem, kontami, pocztą i dostępem do firmowych zasobów.",
     image: "/assets/support-diagnostics.png",
-    items: ["Komputery i laptopy", "Windows", "Poczta", "Pomoc zdalna"],
+    items: ["Komputery i laptopy", "Oprogramowanie", "Poczta", "Pomoc zdalna"],
   },
   {
     icon: DesktopTower,
-    title: "Stanowiska pracy",
-    short: "Sprzęt, konta i dostęp przygotowane przed pierwszym dniem pracy.",
-    detail: "Konfiguruję komputer, aplikacje, pocztę i dostęp do firmowych zasobów, aby nowa osoba mogła rozpocząć pracę bez przestojów.",
+    title: "Komputery i stanowiska pracy",
+    short: "Nowy komputer, potrzebne programy, konta i urządzenia gotowe do pracy.",
+    detail: "Przygotowuję nowe komputery i stanowiska pracy, instaluję potrzebne oprogramowanie, konfiguruję konta i urządzenia oraz dbam o to, aby pracownik mógł od razu rozpocząć pracę.",
     image: "/assets/workstation-setup.png",
     items: ["Sprzęt", "Microsoft 365", "Konta", "Migracja danych"],
   },
   {
     icon: Network,
-    title: "Sieć i porządek",
-    short: "Wi-Fi, kopie zapasowe, dostęp do danych i dokumentacja środowiska.",
-    detail: "Porządkuję najważniejsze elementy infrastruktury, sprawdzam ryzyko i zostawiam czytelną informację o wykonanych zmianach.",
+    title: "Sieci i infrastruktura",
+    short: "Sieć, Wi-Fi, okablowanie i dostęp do firmowych zasobów uporządkowane.",
+    detail: "Konfiguruję sieci, urządzenia i Wi-Fi, pomagam uporządkować okablowanie oraz rozwiązuję problemy z dostępem do firmowych zasobów.",
     image: "/assets/network-infrastructure.png",
-    items: ["LAN i Wi-Fi", "Kopie zapasowe", "Dostępy", "Dokumentacja"],
+    items: ["LAN i Wi-Fi", "Urządzenia", "Okablowanie", "Dostępy"],
   },
   {
     icon: HardDrive,
-    title: "Pomoc indywidualna",
-    short: "Wybrane naprawy, modernizacje, dane i domowe Wi-Fi.",
-    detail: "Przyjmuję jasno określone zlecenia po wcześniejszym umówieniu. Przed rozpoczęciem potwierdzam zakres, koszt i realny termin.",
+    title: "Pomoc komputerowa",
+    short: "Problemy ze sprzętem i oprogramowaniem komputerów oraz laptopów.",
+    detail: "Diagnozuję i rozwiązuję problemy ze sprzętem oraz oprogramowaniem komputerów i laptopów. Przed wykonaniem większej naprawy przedstawiam rozwiązanie i przewidywany koszt.",
     image: "/assets/home-it-support.png",
-    items: ["Diagnostyka", "Modernizacja", "System i dane", "Domowe Wi-Fi"],
+    items: ["Diagnostyka", "Naprawa sprzętu", "Czyszczenie sprzętu", "Domowe Wi-Fi"],
   },
 ] as const;
 
@@ -69,7 +69,7 @@ const principles = [
   },
   {
     title: "Realny termin zamiast pustej obietnicy",
-    copy: "NortIT rozwijam równolegle z pracą na etacie, dlatego dostępność ustalam uczciwie i z wyprzedzeniem.",
+    copy: "Z góry ustalam dostępność i realny termin, żebyś wiedział, kiedy możesz liczyć na rozwiązanie problemu.",
     image: "/assets/realistic-schedule.png",
   },
   {
@@ -81,6 +81,7 @@ const principles = [
 
 const individualItems = [
   [Wrench, "Diagnostyka komputerów i laptopów"],
+  [Wrench, "Naprawa i czyszczenie sprzętu"],
   [HardDrive, "Modernizacja sprzętu i przenoszenie danych"],
   [DesktopTower, "Instalacja oraz konfiguracja systemu"],
   [WifiHigh, "Konfiguracja routera i domowego Wi-Fi"],
@@ -88,12 +89,12 @@ const individualItems = [
 
 const faqItems = [
   ["Dla jakich firm jest NortIT?", "Dla małych i średnich firm, które potrzebują pomocy przy bieżących problemach, stanowiskach pracy, sieci lub porządkowaniu IT."],
-  ["Kiedy realizujesz zlecenia?", "Głównie po 16:00 oraz w terminach ustalonych indywidualnie. Przed przyjęciem pracy zawsze potwierdzam dostępność."],
+  ["Kiedy realizujesz zlecenia?", "Prace planuję głównie po 16:00 oraz w terminach ustalonych indywidualnie. Przed przyjęciem pracy zawsze potwierdzam dostępność."],
   ["Czy możliwa jest pomoc zdalna?", "Tak, jeśli problem można bezpiecznie rozwiązać bez dojazdu. W pozostałych przypadkach ustalam wizytę w Warszawie lub okolicach."],
   ["Czy pomagasz osobom prywatnym?", "Tak. Przyjmuję wybrane zlecenia dotyczące komputerów, laptopów, modernizacji, danych i domowego Wi-Fi."],
 ] as const;
 
-const revealSentence = "Porządne IT nie powinno zajmować Twojej uwagi. Powinno działać, być uporządkowane i dawać Ci spokój w codziennej pracy.";
+const revealSentence = "Bez anonimowego helpdesku. Bez przekazywania spraw między pracownikami.";
 
 export function PremiumHome() {
   const root = useRef<HTMLDivElement>(null);
@@ -200,14 +201,14 @@ export function PremiumHome() {
                 Spokojniejsze IT dla małych i średnich firm.
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-                Rozwiązuję konkretne problemy, przygotowuję stanowiska pracy i porządkuję firmową technologię. Osobiście, odpowiedzialnie i w jasno ustalonym zakresie.
+                Wsparcie IT, konfiguracja sprzętu, sieci i Microsoft 365. Pomagam firmom sprawnie rozwiązywać problemy i utrzymywać porządek w ich środowisku IT.
               </p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                 <a href="#kontakt" className="focus-ring inline-flex items-center justify-center rounded-full bg-[#2f6df6] px-7 py-4 font-semibold text-white transition duration-300 hover:bg-[#4c82fa]">
-                  Opisz zadanie <ArrowDownRight className="ml-2 size-5" aria-hidden="true" />
+                  Opisz problem <ArrowDownRight className="ml-2 size-5" aria-hidden="true" />
                 </a>
-                <a href={site.phoneHref} className="focus-ring inline-flex items-center justify-center rounded-full bg-white px-7 py-4 font-semibold text-[#090d18] transition duration-300 hover:bg-slate-200">
-                  <Phone className="mr-2 size-5" weight="duotone" aria-hidden="true" /> Zadzwoń
+                <a href="#uslugi" className="focus-ring inline-flex items-center justify-center rounded-full bg-white px-7 py-4 font-semibold text-[#090d18] transition duration-300 hover:bg-slate-200">
+                  Poznaj ofertę <ArrowRight className="ml-2 size-5" aria-hidden="true" />
                 </a>
               </div>
             </div>
@@ -292,8 +293,8 @@ export function PremiumHome() {
             <div className="mt-20 grid gap-10 border-t border-white/10 pt-10 md:grid-cols-2 md:gap-24">
               <p className="text-sm font-medium uppercase tracking-[0.14em] text-blue-300">O NortIT</p>
               <div className="space-y-6 text-lg leading-relaxed text-slate-300">
-                <p>NortIT tworzę jako bezpośrednie wsparcie dla firm, które nie potrzebują rozbudowanego działu IT, ale chcą mieć zaufaną osobę do konkretnych zadań.</p>
-                <p>Firmę rozwijam równolegle z pracą na etacie. Nie przyjmuję więcej zleceń, niż mogę osobiście i odpowiedzialnie poprowadzić.</p>
+                <p>NortIT prowadzę osobiście, dlatego masz bezpośredni kontakt z osobą, która zna Twoje środowisko IT i odpowiada za rozwiązanie problemu.</p>
+                <p>Współpracuję zarówno przy pojedynczych zadaniach, jak i przy regularnym wsparciu firm. Nie przyjmuję więcej zleceń, niż mogę odpowiedzialnie obsłużyć.</p>
               </div>
             </div>
           </div>
@@ -310,7 +311,8 @@ export function PremiumHome() {
                 <Image src="/assets/network-infrastructure.png" alt="Uporządkowana infrastruktura sieciowa" fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover contrast-125 saturate-75 transition-transform duration-700 ease-out group-hover:scale-105" />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_25%,rgba(4,8,18,.94))]" />
                 <div className="absolute inset-x-0 bottom-0 p-8 md:p-12">
-                  <p className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] md:text-5xl">Jedno zadanie albo regularny, uzgodniony zakres wsparcia.</p>
+                  <p className="max-w-xl text-3xl font-semibold leading-tight tracking-[-0.04em] md:text-5xl">Jednorazowa pomoc lub stałe wsparcie IT</p>
+                  <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-300 md:text-lg">Możesz zgłosić pojedynczy problem albo powierzyć mi bieżącą obsługę IT swojej firmy. Zakres współpracy dopasowuję do rzeczywistych potrzeb, bez niepotrzebnych usług.</p>
                 </div>
               </article>
 
@@ -318,7 +320,7 @@ export function PremiumHome() {
                 <ShieldCheck className="size-9 text-blue-300" weight="duotone" aria-hidden="true" />
                 <div>
                   <p className="text-4xl font-semibold leading-[1.02] tracking-[-0.05em] md:text-5xl">Najpierw zakres, termin i koszt.</p>
-                  <p className="mt-6 max-w-md text-lg leading-relaxed text-slate-300">Jeśli sytuacja zmienia się w trakcie pracy, dowiadujesz się o tym przed kolejnym etapem.</p>
+                  <p className="mt-6 max-w-md text-lg leading-relaxed text-slate-300">Najpierw ustalamy zakres, termin i koszt. Dopiero potem działamy. Bez niejasnych rozliczeń i niespodziewanych kosztów.</p>
                 </div>
               </article>
 
@@ -361,7 +363,7 @@ export function PremiumHome() {
         <section id="klienci-indywidualni" className="border-y border-white/[0.08] bg-[#090e1b] py-28 md:py-36">
           <div className="site-shell grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             <div>
-              <p className="text-sm font-medium uppercase tracking-[0.14em] text-blue-300">Także dla domu</p>
+              <p className="text-sm font-medium uppercase tracking-[0.14em] text-blue-300">Także dla klientów indywidualnych</p>
               <h2 className="mt-6 max-w-2xl text-5xl font-semibold leading-[0.98] tracking-[-0.055em] md:text-6xl">Domowy komputer też zasługuje na porządną pomoc.</h2>
               <p className="mt-7 max-w-xl text-lg leading-relaxed text-slate-400">Przyjmuję wybrane, jasno określone zlecenia. Przed rozpoczęciem potwierdzam zakres, przewidywany koszt i termin.</p>
             </div>
@@ -475,7 +477,19 @@ function Brand() {
 }
 
 function Marquee() {
-  const words = ["Stanowiska pracy", "Sieci firmowe", "Kopie zapasowe", "Microsoft 365", "Dokumentacja", "Pomoc zdalna"];
+  const words = [
+    "Naprawa sprzętu",
+    "Czyszczenie sprzętu",
+    "Komputery i laptopy",
+    "Instalacja oprogramowania",
+    "Stanowiska pracy",
+    "Microsoft 365",
+    "Sieci i Wi-Fi",
+    "Drukarki",
+    "Kopie zapasowe",
+    "Bieżące wsparcie",
+    "Pomoc zdalna",
+  ];
   return (
     <div className="marquee-shell border-y border-white/[0.08] bg-[#080c17] py-5" aria-label="Zakres usług">
       <div className="marquee-track">
