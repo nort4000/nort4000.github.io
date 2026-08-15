@@ -1,4 +1,4 @@
-const defaultUrl = "https://nortit.pl";
+const defaultUrl = "https://www.nortit.pl";
 
 export const site = {
   name: "NortIT",
@@ -6,8 +6,8 @@ export const site = {
   phone: "887 602 981",
   phoneInternational: "+48 887 602 981",
   phoneHref: "tel:+48887602981",
-  email: "kontakt.nortit@gmail.com",
-  emailHref: "mailto:kontakt.nortit@gmail.com",
+  email: "kontakt@nortit.pl",
+  emailHref: "mailto:kontakt@nortit.pl",
   area: "Warszawa i okolice",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Warszawa",
 };
