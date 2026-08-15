@@ -2,20 +2,24 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Logo } from "./logo";
 
 const links = [
-  ["Start", "#start"],
-  ["Usługi", "#uslugi"],
-  ["O mnie", "#o-mnie"],
-  ["Współpraca", "#wspolpraca"],
-  ["Kontakt", "#kontakt"],
+  { label: "Start", href: "/#start" },
+  { label: "Usługi", href: "/#uslugi" },
+  { label: "O mnie", href: "/#o-mnie" },
+  { label: "Współpraca", href: "/#wspolpraca" },
+  { label: "Cennik", href: "/cennik" },
+  { label: "Kontakt", href: "/#kontakt" },
 ] as const;
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
+  const pathname = usePathname();
 
   useEffect(() => {
     const closeOnEscape = (event: KeyboardEvent) => {
@@ -31,19 +35,30 @@ export function Navbar() {
         <Logo />
 
         <div className="hidden items-center gap-7 lg:flex">
-          {links.map(([label, href]) => (
-            <a key={href} href={href} className="focus-ring rounded-md text-sm text-slate-300 transition hover:text-white">
-              {label}
-            </a>
-          ))}
+          {links.map(({ label, href }) => {
+            const isActive = pathname === href;
+            return (
+              <Link
+                key={href}
+                href={href}
+                className={`focus-ring rounded-md text-sm transition ${
+                  isActive
+                    ? "font-semibold text-white text-blue-400"
+                    : "text-slate-300 hover:text-white"
+                }`}
+              >
+                {label}
+              </Link>
+            );
+          })}
         </div>
 
-        <a
-          href="#kontakt"
+        <Link
+          href="/#kontakt"
           className="focus-ring hidden whitespace-nowrap rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#050816] transition hover:bg-blue-50 active:translate-y-px lg:inline-flex"
         >
           Napisz do mnie <ArrowUpRight className="ml-2 size-4" aria-hidden="true" />
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -68,23 +83,28 @@ export function Navbar() {
             className="overflow-hidden border-t hairline bg-[#050816] lg:hidden"
           >
             <div className="page-shell flex flex-col py-4">
-              {links.map(([label, href]) => (
-                <a
-                  key={href}
-                  href={href}
-                  onClick={() => setOpen(false)}
-                  className="focus-ring rounded-md border-b hairline py-4 text-lg"
-                >
-                  {label}
-                </a>
-              ))}
-              <a
-                href="#kontakt"
+              {links.map(({ label, href }) => {
+                const isActive = pathname === href;
+                return (
+                  <Link
+                    key={href}
+                    href={href}
+                    onClick={() => setOpen(false)}
+                    className={`focus-ring rounded-md border-b hairline py-4 text-lg ${
+                      isActive ? "font-semibold text-blue-400" : "text-slate-300"
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                );
+              })}
+              <Link
+                href="/#kontakt"
                 onClick={() => setOpen(false)}
-                className="focus-ring mt-5 rounded-full bg-[#2563EB] px-5 py-3 text-center font-semibold"
+                className="focus-ring mt-5 rounded-full bg-[#2563EB] px-5 py-3 text-center font-semibold text-white"
               >
                 Napisz do mnie
-              </a>
+              </Link>
             </div>
           </motion.div>
         ) : null}
