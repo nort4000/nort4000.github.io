@@ -429,6 +429,7 @@ export function PremiumHome() {
           </div>
           <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-slate-400">
             <a href="#uslugi" className="hover:text-white">Usługi</a>
+            <a href="/cennik/" className="hover:text-white">Cennik</a>
             <a href="#o-mnie" className="hover:text-white">O mnie</a>
             <a href="/polityka-prywatnosci/" className="hover:text-white">Prywatność</a>
             <a href="#kontakt" className="hover:text-white">Kontakt</a>
@@ -441,7 +442,7 @@ export function PremiumHome() {
 }
 
 function Header({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: (open: boolean) => void }) {
-  const links = [["Usługi", "#uslugi"], ["O mnie", "#o-mnie"], ["Współpraca", "#wspolpraca"], ["Kontakt", "#kontakt"]] as const;
+  const links = [["Usługi", "#uslugi"], ["Cennik", "/cennik/"], ["O mnie", "#o-mnie"], ["Współpraca", "#wspolpraca"], ["Kontakt", "#kontakt"]] as const;
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-5 md:pt-5">
