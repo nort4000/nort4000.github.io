@@ -19,7 +19,8 @@ const links = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
-  const pathname = usePathname();
+  const rawPathname = usePathname();
+  const pathname = rawPathname !== "/" ? rawPathname.replace(/\/$/, "") : rawPathname;
 
   useEffect(() => {
     const closeOnEscape = (event: KeyboardEvent) => {
