@@ -28,11 +28,11 @@ No automated test framework or coverage threshold is configured. Every change mu
 
 ## Commit & Pull Request Guidelines
 
-The repository has no established commit history. Use short, imperative Conventional Commit messages, for example `fix: handle FormSubmit activation` or `feat: add individual services section`. Pull requests should explain the user-visible change, list verification performed, link relevant issues, and include before/after screenshots for visual changes. Call out changes to contact details, SEO metadata, FormSubmit, or static-export behavior.
+The repository has no established commit history. Use short, imperative Conventional Commit messages, for example `fix: handle FormSubmit activation` or `feat: add individual services section`. Pull requests should explain the user-visible change, list verification performed, link relevant issues, and include before/after screenshots for visual changes. Call out changes to contact details, SEO metadata, EmailJS, or static-export behavior.
 
 ## Security & Configuration Tips
 
-Set `NEXT_PUBLIC_SITE_URL` for production builds. Never commit hosting credentials or email passwords. FormSubmit requires one-time mailbox activation; keep secrets out of client-side code.
+Set `NEXT_PUBLIC_SITE_URL` for production builds. Never commit hosting credentials or email passwords. The contact form uses EmailJS. Keep service and template restrictions aligned with `nortit.pl`, enable available anti-spam controls, and never commit email passwords or private server credentials.
 
 ## Generated Assets
 
