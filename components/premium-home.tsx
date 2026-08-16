@@ -89,7 +89,7 @@ const individualItems = [
 
 const faqItems = [
   ["Dla jakich firm jest NortIT?", "Dla małych i średnich firm, które potrzebują pomocy z komputerami, kontami, pocztą, siecią albo bieżącą obsługą IT."],
-  ["Kiedy realizujesz zlecenia?", "Najczęściej pracuję po 16:00. Każdy termin ustalam indywidualnie i potwierdzam przed przyjęciem zlecenia."],
+  ["Kiedy realizujesz zlecenia?", "Termin każdego zlecenia ustalam indywidualnie i potwierdzam go przed rozpoczęciem pracy."],
   ["Czy możliwa jest pomoc zdalna?", "Tak, jeśli do rozwiązania problemu nie jest potrzebna wizyta na miejscu. W innym przypadku umawiam dojazd w Warszawie lub okolicach."],
   ["Czy pomagasz osobom prywatnym?", "Tak. Pomagam między innymi przy komputerach i laptopach, modernizacji sprzętu, przenoszeniu danych oraz domowym Wi-Fi."],
 ] as const;
@@ -220,8 +220,8 @@ export function PremiumHome() {
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_35%,rgba(3,7,18,.9))]" />
                 <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-5 p-7 md:p-9">
                   <div>
-                    <p className="text-sm text-slate-400">Dostępność</p>
-                    <p className="mt-1 text-lg font-semibold">Po 16:00, po umówieniu</p>
+                    <p className="text-sm text-slate-400">Termin realizacji</p>
+                    <p className="mt-1 text-lg font-semibold">Ustalany indywidualnie</p>
                   </div>
                   <div className="grid size-12 place-items-center rounded-full border border-white/15 bg-white/10 backdrop-blur-xl">
                     <Check className="size-5 text-blue-300" weight="bold" aria-hidden="true" />
@@ -377,7 +377,7 @@ export function PremiumHome() {
                 </div>
               ))}
               <div className="flex flex-col gap-5 py-7 sm:flex-row sm:items-center sm:justify-between">
-                <p className="flex items-center gap-3 text-sm text-slate-400"><Clock className="size-4 text-blue-300" weight="duotone" aria-hidden="true" /> Po 16:00, w umówionym terminie</p>
+                <p className="flex items-center gap-3 text-sm text-slate-400"><Clock className="size-4 text-blue-300" weight="duotone" aria-hidden="true" /> Terminy ustalane indywidualnie</p>
                 <a href="#kontakt" className="focus-ring inline-flex items-center font-semibold text-blue-300 hover:text-white">Opisz problem <ArrowRight className="ml-2 size-4" aria-hidden="true" /></a>
               </div>
             </div>
