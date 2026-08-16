@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: "NortIT | Wsparcie IT dla małych i średnich firm",
-  description: "Praktyczne wsparcie IT dla małych i średnich firm oraz wybrane usługi komputerowe dla klientów indywidualnych w Warszawie i okolicach.",
+  description: "Pomoc IT dla małych i średnich firm oraz osób prywatnych w Warszawie i okolicach. Komputery, sieci, poczta, Microsoft 365 i bieżące wsparcie.",
   keywords: [
     "obsługa IT Warszawa",
     "informatyk Warszawa",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: {
     title: "NortIT | Wsparcie IT dla firm",
-    description: "Wsparcie IT dla małych i średnich firm oraz wybrane usługi komputerowe w Warszawie.",
+    description: "Pomoc IT dla firm i osób prywatnych w Warszawie. Komputery, sieci, poczta i bieżące wsparcie.",
     url: "/",
     siteName: "NortIT",
     locale: "pl_PL",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "NortIT | Wsparcie IT dla firm",
-    description: "Praktyczne wsparcie IT dla małych i średnich firm w Warszawie i okolicach.",
+    description: "Pomoc IT dla małych i średnich firm w Warszawie i okolicach.",
     images: ["/og.jpg"],
   },
 };
