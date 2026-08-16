@@ -131,14 +131,14 @@ export function PricingContent() {
           <div className="site-shell relative">
             <p className="mb-7 flex items-center gap-3 text-sm font-medium tracking-[0.08em] text-blue-300">
               <span className="h-px w-10 bg-blue-400" aria-hidden="true" />
-              Transparentne warunki
+              Ceny podstawowych usług
             </p>
             <h1 className="max-w-4xl text-balance text-[clamp(2.75rem,5.6vw,5.5rem)] font-semibold leading-[0.92] tracking-[-0.06em] text-white">
               Cennik usług IT
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-              Przejrzyste ceny podstawowych usług IT. W przypadku bardziej złożonych prac
-              przygotujemy indywidualną wycenę przed rozpoczęciem prac.
+              Poniżej znajdziesz orientacyjne ceny najczęściej wybieranych usług. Jeśli problem jest
+              bardziej złożony, najpierw sprawdzę zakres prac i podam wycenę.
             </p>
           </div>
         </section>
@@ -191,10 +191,9 @@ export function PricingContent() {
           <div className="site-shell">
             <div className="rounded-2xl border border-white/10 bg-[#090e1b] p-6 text-sm leading-relaxed text-slate-400 md:p-7">
               <p>
-                <strong className="text-white">Ważne:</strong> Podane ceny są cenami „od” i dotyczą
-                standardowego zakresu prac. Ostateczna cena może zależeć od stanu urządzenia,
-                zakresu problemu i wymaganych prac. Koszt części, podzespołów oraz dodatkowych
-                materiałów jest ustalany osobno i akceptowany przez klienta przed rozpoczęciem prac.
+                <strong className="text-white">Ważne:</strong> Podane kwoty są cenami „od”. Ostateczny koszt zależy od usterki, stanu urządzenia
+                i czasu potrzebnego na wykonanie usługi. Części i materiały wyceniam osobno.
+                Zawsze podaję koszt do akceptacji przed rozpoczęciem pracy.
               </p>
             </div>
           </div>
@@ -208,8 +207,8 @@ export function PricingContent() {
               Nie wiesz, której usługi potrzebujesz?
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-blue-100">
-              Opisz nam swój problem. Pomożemy dobrać odpowiednią usługę i przedstawimy koszt przed
-              rozpoczęciem prac.
+              Opisz krótko, co się dzieje. Podpowiem, jaka usługa będzie potrzebna, i podam koszt
+              przed rozpoczęciem pracy.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
