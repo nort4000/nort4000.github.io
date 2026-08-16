@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ThankYouPage() {
   return (
-    <main className="grid min-h-screen place-items-center bg-[#060914] px-5 text-white">
+    <main className="grid min-h-[100dvh] place-items-center bg-[#060914] px-5 text-white">
       <section className="w-full max-w-xl rounded-[2rem] border border-white/10 bg-[#0d1220] p-8 text-center shadow-[0_35px_100px_rgba(0,0,0,.35)] md:p-12">
         <CheckCircle className="mx-auto size-12 text-blue-400" aria-hidden="true" />
         <p className="mt-7 text-sm font-medium uppercase tracking-[0.14em] text-blue-300">Wiadomość wysłana</p>
@@ -27,3 +27,4 @@ export default function ThankYouPage() {
     </main>
   );
 }
+
