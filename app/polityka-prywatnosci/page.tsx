@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
             Możemy otrzymać imię, adres e-mail, numer telefonu, nazwę firmy oraz informacje opisane przez Ciebie w wiadomości.
           </PolicySection>
           <PolicySection title="Odbiorcy danych">
-            Dane nie są sprzedawane. Formularz korzysta z usługi FormSubmit, która przekazuje wiadomość na adres e-mail NortIT. Dostawca może tymczasowo przetwarzać i przechowywać zgłoszenia zgodnie ze swoją polityką prywatności.
+            Dane nie są sprzedawane. Formularz korzysta z usługi EmailJS, która przekazuje wiadomość na adres e-mail NortIT. Dostawca może przetwarzać dane potrzebne do wysłania wiadomości zgodnie ze swoją polityką prywatności.
           </PolicySection>
           <PolicySection title="Alternatywny kontakt">
             Jeśli nie chcesz korzystać z formularza, możesz skontaktować się bezpośrednio telefonicznie lub przez e-mail.
