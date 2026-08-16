@@ -88,10 +88,10 @@ const individualItems = [
 ] as const;
 
 const faqItems = [
-  ["Dla jakich firm jest NortIT?", "Dla małych i średnich firm, które potrzebują pomocy przy bieżących problemach, stanowiskach pracy, sieci lub porządkowaniu IT."],
-  ["Kiedy realizujesz zlecenia?", "Prace planuję głównie po 16:00 oraz w terminach ustalonych indywidualnie. Przed przyjęciem pracy zawsze potwierdzam dostępność."],
-  ["Czy możliwa jest pomoc zdalna?", "Tak, jeśli problem można bezpiecznie rozwiązać bez dojazdu. W pozostałych przypadkach ustalam wizytę w Warszawie lub okolicach."],
-  ["Czy pomagasz osobom prywatnym?", "Tak. Przyjmuję wybrane zlecenia dotyczące komputerów, laptopów, modernizacji, danych i domowego Wi-Fi."],
+  ["Dla jakich firm jest NortIT?", "Dla małych i średnich firm, które potrzebują pomocy z komputerami, kontami, pocztą, siecią albo bieżącą obsługą IT."],
+  ["Kiedy realizujesz zlecenia?", "Najczęściej pracuję po 16:00. Każdy termin ustalam indywidualnie i potwierdzam przed przyjęciem zlecenia."],
+  ["Czy możliwa jest pomoc zdalna?", "Tak, jeśli do rozwiązania problemu nie jest potrzebna wizyta na miejscu. W innym przypadku umawiam dojazd w Warszawie lub okolicach."],
+  ["Czy pomagasz osobom prywatnym?", "Tak. Pomagam między innymi przy komputerach i laptopach, modernizacji sprzętu, przenoszeniu danych oraz domowym Wi-Fi."],
 ] as const;
 
 const revealSentence = "Kontaktujesz się bezpośrednio ze mną. Od początku wiem, czego dotyczy Twoja sprawa.";
