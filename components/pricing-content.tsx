@@ -121,7 +121,7 @@ const pricingData: PricingCategory[] = [
 
 export function PricingContent() {
   return (
-    <div className="min-h-screen bg-[#060914] text-white">
+    <div className="min-h-[100dvh] bg-[#060914] text-white">
       <Navbar />
 
       <main className="w-full max-w-full overflow-x-hidden pt-[72px]">
@@ -258,3 +258,4 @@ export function PricingContent() {
     </div>
   );
 }
+

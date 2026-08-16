@@ -165,7 +165,8 @@ details[open] summary {
   }
 
   .marquee-track {
-    animation: marquee 36s linear infinite !important;
-    animation-iteration-count: infinite !important;
+    animation: none !important;
+    transform: none !important;
   }
 }
+

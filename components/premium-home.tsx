@@ -22,7 +22,7 @@ import {
   Wrench,
   X,
 } from "@phosphor-icons/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ContactForm } from "@/components/contact-form";
 import { site } from "@/lib/site";
 
@@ -185,19 +185,19 @@ export function PremiumHome() {
   const principle = principles[activePrinciple];
 
   return (
-    <div ref={root} className="min-h-screen bg-[#060914] text-white">
+    <div ref={root} className="min-h-[100dvh] bg-[#060914] text-white">
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
       <main className="w-full max-w-full overflow-x-hidden">
-        <section id="start" className="relative min-h-screen overflow-hidden pt-28 md:pt-32">
+        <section id="start" className="relative min-h-[100dvh] overflow-hidden pt-28 md:pt-32">
           <div className="hero-ambient" aria-hidden="true" />
-          <div className="site-shell relative grid min-h-[calc(100vh-8rem)] items-center gap-14 pb-20 xl:grid-cols-[1.18fr_0.82fr] xl:gap-12">
+          <div className="site-shell relative grid min-h-[calc(100dvh-8rem)] items-center gap-14 pb-20 xl:grid-cols-[1.18fr_0.82fr] xl:gap-12">
             <div className="hero-copy relative z-10 max-w-6xl">
               <p className="mb-7 flex items-center gap-3 text-sm font-medium tracking-[0.08em] text-blue-300">
                 <span className="h-px w-10 bg-blue-400" aria-hidden="true" />
                 Wsparcie IT dla firm w Warszawie
               </p>
-              <h1 className="max-w-6xl text-[clamp(3.25rem,6.7vw,7.5rem)] font-semibold leading-[0.89] tracking-[-0.075em] text-white">
+              <h1 className="max-w-6xl text-[clamp(2.75rem,6.7vw,7.5rem)] font-semibold leading-[0.94] tracking-[-0.065em] text-white md:leading-[0.89] md:tracking-[-0.075em]">
                 Spokojniejsze IT dla małych i średnich firm.
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
@@ -444,9 +444,40 @@ export function PremiumHome() {
 function Header({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: (open: boolean) => void }) {
   const links = [["Usługi", "#uslugi"], ["Cennik", "/cennik/"], ["O mnie", "#o-mnie"], ["Współpraca", "#wspolpraca"], ["Kontakt", "#kontakt"]] as const;
 
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const closeMenu = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    const closeOnDesktop = () => {
+      if (window.matchMedia("(min-width: 1024px)").matches) setMenuOpen(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", closeMenu);
+    window.addEventListener("resize", closeOnDesktop);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", closeMenu);
+      window.removeEventListener("resize", closeOnDesktop);
+    };
+  }, [menuOpen, setMenuOpen]);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-5 md:pt-5">
-      <div className="site-shell rounded-full border border-white/10 bg-[#080c17]/80 px-4 shadow-[0_18px_60px_rgba(0,0,0,.35)] backdrop-blur-2xl md:px-5">
+    <>
+      {menuOpen ? (
+        <button
+          type="button"
+          aria-label="Zamknij menu"
+          onClick={() => setMenuOpen(false)}
+          className="fixed inset-0 z-40 bg-[#030610]/80 backdrop-blur-sm lg:hidden"
+        />
+      ) : null}
+      <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-5 md:pt-5">
+      <div className={`site-shell border border-white/10 bg-[#080c17]/95 px-4 shadow-[0_18px_60px_rgba(0,0,0,.35)] backdrop-blur-2xl transition-[border-radius] md:px-5 ${menuOpen ? "rounded-[2rem]" : "rounded-full"}`}>
         <div className="flex h-16 items-center justify-between">
           <Brand />
           <nav className="hidden items-center gap-7 lg:flex" aria-label="Nawigacja główna">
@@ -458,13 +489,14 @@ function Header({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: (op
           </button>
         </div>
         {menuOpen ? (
-          <nav className="border-t border-white/10 pb-5 pt-3 lg:hidden" aria-label="Nawigacja mobilna">
-            {links.map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="block border-b border-white/[0.08] py-3 text-lg">{label}</a>)}
+          <nav className="max-h-[calc(100dvh-6rem)] overflow-y-auto overscroll-contain border-t border-white/10 pb-5 pt-2 lg:hidden" aria-label="Nawigacja mobilna">
+            {links.map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="focus-ring block rounded-md border-b border-white/[0.08] py-3 text-lg">{label}</a>)}
             <a href="#kontakt" onClick={() => setMenuOpen(false)} className="mt-4 flex items-center justify-center rounded-full bg-white px-5 py-3 font-semibold text-[#090d18]">Napisz do mnie</a>
           </nav>
         ) : null}
       </div>
-    </header>
+      </header>
+    </>
   );
 }
 
@@ -503,3 +535,4 @@ function Marquee() {
     </div>
   );
 }
+
