@@ -2,10 +2,10 @@ import { PremiumHome } from "@/components/premium-home";
 import { site } from "@/lib/site";
 
 const faqItems = [
-  ["Dla jakich firm jest NortIT?", "Dla małych i średnich firm, które potrzebują pomocy z komputerami, kontami, pocztą, siecią albo bieżącą obsługą IT."],
-  ["Kiedy realizujesz zlecenia?", "Termin każdego zlecenia ustalam indywidualnie i potwierdzam go przed rozpoczęciem pracy."],
-  ["Czy możliwa jest pomoc zdalna?", "Tak, jeśli do rozwiązania problemu nie jest potrzebna wizyta na miejscu. W innym przypadku umawiam dojazd w Warszawie lub okolicach."],
-  ["Czy pomagasz osobom prywatnym?", "Tak. Pomagam między innymi przy komputerach i laptopach, modernizacji sprzętu, przenoszeniu danych oraz domowym Wi-Fi."],
+  ["Dla jakich firm jest NortIT?", "Dla małych i średnich firm, które potrzebują pomocy przy bieżących problemach, stanowiskach pracy, sieci lub porządkowaniu IT."],
+  ["Kiedy realizujesz zlecenia?", "Termin realizacji ustalany indywidualnie. Przed przyjęciem pracy zawsze potwierdzam dostępność."],
+  ["Czy możliwa jest pomoc zdalna?", "Tak, jeśli problem można bezpiecznie rozwiązać bez dojazdu. W pozostałych przypadkach ustalam wizytę w Warszawie lub okolicach."],
+  ["Czy pomagasz osobom prywatnym?", "Tak. Przyjmuję wybrane zlecenia dotyczące komputerów, laptopów, modernizacji, danych i domowego Wi-Fi."],
 ] as const;
 
 const businessSchema = {
@@ -54,3 +54,4 @@ export default function Home() {
     </>
   );
 }
+
